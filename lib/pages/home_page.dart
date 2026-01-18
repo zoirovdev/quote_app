@@ -98,46 +98,41 @@ class _HomePageState extends State<HomePage> {
         padding: EdgeInsets.all(20.0),
         child: Column(
           children: [
-            // Quote card
-            Card(
-              elevation: 5,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Padding(
-                padding: EdgeInsets.all(30.0),
-                child: Column(
-                  children: [
-                    isLoading
-                        ? const CircularProgressIndicator(
-                            color: Colors.deepPurple,
+            Padding(
+              padding: EdgeInsets.all(30.0),
+              child: Column(
+                children: [
+                  isLoading
+                      ? Center(
+                          child: const CircularProgressIndicator(
+                          color: Colors.deepPurple,
                           )
-                        : Column(
-                            children: [
-                              Text(
-                                quote,
-                                textAlign: TextAlign.center,
-                                style: GoogleFonts.lato(
-                                  fontSize: 22,
-                                  fontStyle: FontStyle.italic,
-                                  fontWeight: FontWeight.w600,
-                                ),
+                        )
+                      : Column(
+                          children: [
+                            Text(
+                              quote,
+                              textAlign: TextAlign.center,
+                              style: GoogleFonts.lato(
+                                fontSize: 22,
+                                fontStyle: FontStyle.italic,
+                                fontWeight: FontWeight.w600,
                               ),
-                              const SizedBox(height: 20),
-                              Text(
-                                author,
-                                style: GoogleFonts.lato(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.grey[700],
-                                ),
+                            ),
+                            const SizedBox(height: 20),
+                            Text(
+                              author,
+                              style: GoogleFonts.lato(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.grey[700],
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
+                        ),
                   ],
                 ),
               ),
-            ),
 
             const SizedBox(height: 40),
 
