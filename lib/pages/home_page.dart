@@ -108,28 +108,30 @@ class _HomePageState extends State<HomePage> {
                           color: Colors.deepPurple,
                           )
                         )
-                      : Column(
-                          children: [
-                            Text(
-                              quote,
-                              textAlign: TextAlign.center,
-                              style: GoogleFonts.lato(
-                                fontSize: 22,
-                                fontStyle: FontStyle.italic,
-                                fontWeight: FontWeight.w600,
+                      : Center(
+                        child: Column(
+                            children: [
+                              Text(
+                                quote,
+                                textAlign: TextAlign.center,
+                                style: GoogleFonts.lato(
+                                  fontSize: 22,
+                                  fontStyle: FontStyle.italic,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
-                            ),
-                            const SizedBox(height: 20),
-                            Text(
-                              author,
-                              style: GoogleFonts.lato(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.grey[700],
+                              const SizedBox(height: 20),
+                              Text(
+                                author,
+                                style: GoogleFonts.lato(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.grey[700],
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
+                            ],
+                          ),
+                      ),
                   ],
                 ),
               ),
